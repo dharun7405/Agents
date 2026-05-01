@@ -15,4 +15,5 @@ dependencies = [
     "langchain-pinecone>=0.2.13",
     "langchainhub>=0.1.21",
     "python-dotenv>=1.2.2",
+    "sentence-transformers>=5.4.1",
 ]
