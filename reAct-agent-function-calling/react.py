@@ -2,6 +2,8 @@ from dotenv import load_dotenv
 from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 from langchain_groq import ChatGroq
+from langchain_ollama import ChatOllama
+
 
 load_dotenv()
 
@@ -14,4 +16,4 @@ def triple(num:float) -> float:
     return float(num) * 3
 
 tools = [TavilySearch(max_results=1), triple]
-llm = ChatGroq(model="Llama-3-Groq-8B-Tool-Use",temperature=0).bind_tools(tools)
+llm = ChatOllama(model="qwen3:1.7b",temperature=0).bind_tools(tools)
